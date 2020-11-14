@@ -263,7 +263,7 @@ class EvalContent extends Component {
   };
 
   render() {
-    const { handleSubmit, currentUser } = this.props;
+    const { currentUser } = this.props;
 
     if (currentUser === null) {
       return <Redirect to="/signup" />;
