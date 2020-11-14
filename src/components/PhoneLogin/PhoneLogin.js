@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./PhoneLogin.css";
 
 const PhoneLogin = ({ signup }) => {
@@ -12,21 +13,13 @@ const PhoneLogin = ({ signup }) => {
         <input name="phoneNumber" type="tel" placeholder="Phone Number" />
 
         {signup ? (
-          <input
-            id="signup-submit"
-            type="submit"
-            className="signup-submit"
-            key="signup-submit"
-            value="Sign Up"
-          />
+          <Link to="/Eval" id="signup-submit" className="signup-submit">
+            Sign Up
+          </Link>
         ) : (
-          <input
-            id="signup-submit"
-            type="submit"
-            className="signup-submit"
-            key="signup-submit"
-            value="Log In"
-          />
+          <Link to="/Patient" id="signup-submit" className="signup-submit">
+            Log In
+          </Link>
         )}
       </form>
     </>
