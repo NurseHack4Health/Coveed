@@ -16,9 +16,7 @@ class ActivitySchedule extends React.Component {
   }
 
   checkActivities = () => {
-    let updateGuides = false;
-
-    let newLocalGuides = this.props.guides.map((item, index) => {
+    this.props.guides.map((item, index) => {
       // update status of items on activity schedule
       let currentTime = new Date();
       let nextTime = item.nextTime
@@ -29,7 +27,6 @@ class ActivitySchedule extends React.Component {
         // avoid updating guides unnecessarily
         if (item.done === true) {
           item.done = false;
-          updateGuides = true;
         }
       }
 
